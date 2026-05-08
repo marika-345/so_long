@@ -33,7 +33,7 @@ $(LIBFT):
 	$(MAKE) -C $(LIBFT_DIR)
 
 $(MLX):
-	$(MAKE) -C $(MLX_DIR)
+	$(MAKE) -C $(MLX_DIR) CFLAGS="-O3 -std=gnu89 -I/usr/include"
 
 $(NAME): $(LIBFT) $(MLX) $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(LDFLAGS) -o $(NAME)
